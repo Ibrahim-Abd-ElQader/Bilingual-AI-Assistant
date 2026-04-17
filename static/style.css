@@ -84,7 +84,7 @@ body {
     scrollbar-width: thin;
 }
 
-/* Message bubbles - support both Arabic and English */
+
 .user, .bot {
     padding: 14px 20px;
     border-radius: 18px;
@@ -95,7 +95,7 @@ body {
     word-wrap: break-word;
     display: block;
     width: fit-content;
-    /* Ensure proper text direction for mixed content */
+    
     unicode-bidi: plaintext;
 }
 
@@ -164,7 +164,7 @@ body {
     opacity: 0.9;
 }
 
-/* Typing Indicator */
+
 .typing-indicator {
     display: flex;
     align-items: center;
@@ -196,7 +196,7 @@ body {
     30% { transform: translateY(-4px); }
 }
 
-/* Custom scrollbar */
+
 .chatbox::-webkit-scrollbar {
     width: 6px;
 }
@@ -209,7 +209,6 @@ body {
     border-radius: 10px;
 }
 
-/* Responsive */
 @media (max-width: 600px) {
     .chat-wrapper {
         width: 100%;
