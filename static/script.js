@@ -5,15 +5,13 @@ async function send() {
     
     if (!message) return;
 
-    // Add user message immediately
     addMessage(message, "user");
     input.value = "";
     
-    // Disable input while bot is thinking
     input.disabled = true;
     sendBtn.disabled = true;
 
-    // Show typing indicator
+  
     const loadingDiv = showTypingIndicator();
 
     try {
@@ -26,12 +24,12 @@ async function send() {
         const data = await res.json();
         
         loadingDiv.remove();
-        // Add bot response with typing animation
+        
         addMessage(data.reply, "bot", true); 
 
     } catch (error) {
         if (loadingDiv) loadingDiv.remove();
-        // Neutral error message (English, as network error doesn't know user's language)
+      
         addMessage("Sorry, a connection error occurred. Please try again.", "bot");
     } finally {
         input.disabled = false;
@@ -56,7 +54,7 @@ function addMessage(text, cls, animate = false) {
             if (i >= text.length) {
                 clearInterval(interval);
             }
-        }, 20); // typing speed
+        }, 20); 
     } else {
         div.textContent = text;
     }
