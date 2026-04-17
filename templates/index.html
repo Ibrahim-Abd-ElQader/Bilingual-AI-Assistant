@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant | Bilingual Chatbot</title>
+    
+    <!-- Google Fonts: Inter for English, plus fallback for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <div class="chat-wrapper">
+        <div class="chat-container">
+            <!-- Header -->
+            <div class="chat-header">
+                <div class="bot-info">
+                    <div class="avatar-status">
+                        <i class="fas fa-robot"></i>
+                        <span class="status-dot"></span>
+                    </div>
+                    <div class="bot-details">
+                        <h2>AI Assistant</h2>
+                        <p>Online • Bilingual (العربية/English)</p>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
+
+            <!-- Chat messages area -->
+            <div id="chatbox" class="chatbox">
+                <!-- Default welcome message (will be replaced by bot's language detection) -->
+                <div class="bot">
+                    <div class="message-content">
+                        <i class="fas fa-robot"></i>
+                        <span>Hello! I speak both Arabic and English. Ask me anything about AI, Machine Learning, Computer Vision, or NLP.</span>
+                    </div>
+                </div>
+                <div class="bot">
+                    <div class="message-content">
+                        <i class="fas fa-robot"></i>
+                        <span>مرحباً! أتحدث العربية والإنجليزية. اسألني عن الذكاء الاصطناعي، تعلم الآلة، رؤية الكمبيوتر، أو معالجة اللغة الطبيعية.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input area -->
+            <div class="input-area">
+                <div class="input-wrapper">
+                    <i class="far fa-smile icon-btn" id="emoji-btn"></i>
+                    <input type="text" id="msg" placeholder="اكتب سؤالك هنا... Type your question here..." autocomplete="off">
+                    <button id="send-btn" onclick="send()">
+                        <span>إرسال / Send</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="input-footer">
+                    <span>يدعم العربية والإنجليزية | Supports Arabic & English</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
